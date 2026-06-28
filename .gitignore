@@ -1,0 +1,7 @@
+environments/*.local.json
+oauth2_credentials.json
+.apidash/local/
+history/
+*.tmp
+.DS_Store
+Thumbs.db

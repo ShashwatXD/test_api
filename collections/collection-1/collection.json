@@ -1,0 +1,13 @@
+{
+  "id": "collection-1",
+  "name": "Collection 1",
+  "requests": [
+    {
+      "id": "untitled_9639ef50",
+      "name": "",
+      "apiType": "rest",
+      "method": "get",
+      "url": "https://jsonplaceholder.typicode.com/posts"
+    }
+  ]
+}
