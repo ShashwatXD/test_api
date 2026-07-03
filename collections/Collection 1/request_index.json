@@ -2,11 +2,11 @@
   "name": "Collection 1",
   "requests": [
     {
-      "id": "s_c39fe4e0",
+      "id": "ss_c39fe4e0",
       "name": "",
       "apiType": "rest",
       "method": "get",
-      "url": "s"
+      "url": "ss"
     }
   ]
 }
