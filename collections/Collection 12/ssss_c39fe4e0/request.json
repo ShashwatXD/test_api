@@ -1,11 +1,11 @@
 {
-  "id": "sss_c39fe4e0",
+  "id": "ssss_c39fe4e0",
   "apiType": "rest",
   "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "sss",
+    "url": "ssss",
     "headers": null,
     "params": null,
     "authModel": {
