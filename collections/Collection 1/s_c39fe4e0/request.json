@@ -1,11 +1,11 @@
 {
-  "id": "untitled_c39fe4e0",
+  "id": "s_c39fe4e0",
   "apiType": "rest",
   "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "",
+    "url": "s",
     "headers": null,
     "params": null,
     "authModel": {
