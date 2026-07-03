@@ -1,0 +1,12 @@
+{
+  "name": "Collection 1",
+  "requests": [
+    {
+      "id": "untitled_c39fe4e0",
+      "name": "",
+      "apiType": "rest",
+      "method": "get",
+      "url": ""
+    }
+  ]
+}

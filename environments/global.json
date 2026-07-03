@@ -1,5 +1,12 @@
 {
   "id": "global",
   "name": "Global Variables",
-  "values": []
+  "values": [
+    {
+      "key": "sss",
+      "value": "",
+      "type": "variable",
+      "enabled": true
+    }
+  ]
 }
