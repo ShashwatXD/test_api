@@ -6,8 +6,8 @@
   "httpRequestModel": {
     "method": "get",
     "url": "ss",
-    "headers": null,
-    "params": null,
+    "headers": [],
+    "params": [],
     "authModel": {
       "type": "none",
       "apikey": null,
@@ -18,8 +18,8 @@
       "oauth1": null,
       "oauth2": null
     },
-    "isHeaderEnabledList": null,
-    "isParamEnabledList": null,
+    "isHeaderEnabledList": [],
+    "isParamEnabledList": [],
     "bodyContentType": "json",
     "body": null,
     "query": null,
@@ -27,7 +27,7 @@
   },
   "responseStatus": null,
   "message": null,
-  "preRequestScript": null,
-  "postRequestScript": null,
+  "preRequestScript": "",
+  "postRequestScript": "",
   "aiRequestModel": null
 }
