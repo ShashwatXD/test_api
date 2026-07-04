@@ -1,0 +1,33 @@
+{
+  "id": "jsonplaceholder.typicode.composts1_c39fe4e0",
+  "apiType": "rest",
+  "name": "",
+  "description": "",
+  "httpRequestModel": {
+    "method": "get",
+    "url": "https://jsonplaceholder.typicode.com/posts/1 ",
+    "headers": [],
+    "params": [],
+    "authModel": {
+      "type": "none",
+      "apikey": null,
+      "bearer": null,
+      "basic": null,
+      "jwt": null,
+      "digest": null,
+      "oauth1": null,
+      "oauth2": null
+    },
+    "isHeaderEnabledList": [],
+    "isParamEnabledList": [],
+    "bodyContentType": "json",
+    "body": null,
+    "query": null,
+    "formData": null
+  },
+  "responseStatus": 200,
+  "message": "OK",
+  "preRequestScript": "",
+  "postRequestScript": "",
+  "aiRequestModel": null
+}

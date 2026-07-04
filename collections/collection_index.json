@@ -2,6 +2,9 @@
   "collections": [
     {
       "name": "Collection 1"
+    },
+    {
+      "name": "Collection 2"
     }
   ]
 }

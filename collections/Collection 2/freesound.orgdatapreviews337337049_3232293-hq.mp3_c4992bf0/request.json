@@ -1,13 +1,13 @@
 {
-  "id": "ss_c39fe4e0",
+  "id": "freesound.orgdatapreviews337337049_3232293-hq.mp3_c4992bf0",
   "apiType": "rest",
   "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "ss",
-    "headers": [],
-    "params": [],
+    "url": "https://freesound.org/data/previews/337/337049_3232293-hq.mp3",
+    "headers": null,
+    "params": null,
     "authModel": {
       "type": "none",
       "apikey": null,
@@ -18,16 +18,16 @@
       "oauth1": null,
       "oauth2": null
     },
-    "isHeaderEnabledList": [],
-    "isParamEnabledList": [],
+    "isHeaderEnabledList": null,
+    "isParamEnabledList": null,
     "bodyContentType": "json",
     "body": null,
     "query": null,
     "formData": null
   },
-  "responseStatus": null,
-  "message": null,
-  "preRequestScript": "",
-  "postRequestScript": "",
+  "responseStatus": 200,
+  "message": "OK",
+  "preRequestScript": null,
+  "postRequestScript": null,
   "aiRequestModel": null
 }

@@ -2,11 +2,11 @@
   "name": "Collection 1",
   "requests": [
     {
-      "id": "ss_c39fe4e0",
+      "id": "jsonplaceholder.typicode.composts1_c39fe4e0",
       "name": "",
       "apiType": "rest",
       "method": "get",
-      "url": "ss"
+      "url": "https://jsonplaceholder.typicode.com/posts/1"
     }
   ]
 }
