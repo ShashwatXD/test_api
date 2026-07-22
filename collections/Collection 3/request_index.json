@@ -1,0 +1,12 @@
+{
+  "name": "Collection 3",
+  "requests": [
+    {
+      "id": "api.apidash.devopenapi.json_6d890dc0",
+      "name": "api.apidash.devopenapi.json",
+      "apiType": "rest",
+      "method": "get",
+      "url": "https://api.apidash.dev/openapi.json"
+    }
+  ]
+}

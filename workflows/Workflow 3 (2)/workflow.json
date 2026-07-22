@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "Workflow 3 (2)",
+  "name": "Workflow 3 (2)",
+  "createdAt": "2026-07-22T23:01:30.177873",
+  "modifiedAt": "2026-07-22T23:12:09.831454",
+  "viewport": {
+    "x": 0.0,
+    "y": 0.0,
+    "zoom": 1.0
+  },
+  "steps": {
+    "step_2ce26e20": {
+      "label": "Request 1",
+      "request": {
+        "id": "2ce26e21-85f3-11f1-ba1a-978371d9a1bb",
+        "apiType": "rest",
+        "name": "Request 1",
+        "description": "",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://jsonplaceholder.typicode.com/posts",
+          "headers": null,
+          "params": null,
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isHeaderEnabledList": null,
+          "isParamEnabledList": null,
+          "bodyContentType": "json",
+          "body": null,
+          "query": null,
+          "formData": null
+        },
+        "responseStatus": null,
+        "message": null,
+        "httpResponseModel": null,
+        "preRequestScript": null,
+        "postRequestScript": null,
+        "aiRequestModel": null
+      }
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "manualStart",
+        "position": {
+          "x": 95.87245990244077,
+          "y": 217.87394124068317
+        },
+        "label": "Start"
+      },
+      {
+        "id": "node_2ce26e22",
+        "type": "request",
+        "position": {
+          "x": 895.044764937139,
+          "y": 203.50091030489438
+        },
+        "stepKey": "step_2ce26e20",
+        "label": "Request 1"
+      },
+      {
+        "id": "node_9b2757b0",
+        "type": "loop",
+        "position": {
+          "x": 506.11496804739795,
+          "y": 412.6941853298665
+        },
+        "label": "Loop",
+        "loopMaxIterations": 5,
+        "loopMode": "repeat"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_427b7e60",
+        "source": "start",
+        "sourceHandle": "next",
+        "target": "node_9b2757b0",
+        "targetHandle": "in"
+      },
+      {
+        "id": "edge_46d562a0",
+        "source": "node_9b2757b0",
+        "sourceHandle": "next",
+        "target": "node_2ce26e22",
+        "targetHandle": "in"
+      }
+    ]
+  }
+}

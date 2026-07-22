@@ -1,11 +1,11 @@
 {
-  "id": "freesound.orgdatapreviews337337049_3232293-hq.mp3_c4992bf0",
+  "id": "api.apidash.devopenapi.json_6d890dc0",
   "apiType": "rest",
-  "name": "",
+  "name": "api.apidash.devopenapi.json",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "https://freesound.org/data/previews/337/337049_3232293-hq.mp3",
+    "url": "https://api.apidash.dev/openapi.json",
     "headers": null,
     "params": null,
     "authModel": {

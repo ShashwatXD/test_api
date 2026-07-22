@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "Workflow 4",
+  "name": "Workflow 4",
+  "createdAt": "2026-07-22T23:08:48.098767",
+  "modifiedAt": "2026-07-22T23:08:48.098767",
+  "viewport": {
+    "x": 0.0,
+    "y": 0.0,
+    "zoom": 1.0
+  },
+  "steps": {
+    "step_31e80640": {
+      "label": "Request 1",
+      "request": {
+        "id": "31e82d50-85f4-11f1-b731-5bdec9817a97",
+        "apiType": "rest",
+        "name": "Request 1",
+        "description": "",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://",
+          "headers": null,
+          "params": null,
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isHeaderEnabledList": null,
+          "isParamEnabledList": null,
+          "bodyContentType": "json",
+          "body": null,
+          "query": null,
+          "formData": null
+        },
+        "responseStatus": null,
+        "message": null,
+        "httpResponseModel": null,
+        "preRequestScript": null,
+        "postRequestScript": null,
+        "aiRequestModel": null
+      }
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "manualStart",
+        "position": {
+          "x": 80.0,
+          "y": 180.0
+        },
+        "label": "Start"
+      },
+      {
+        "id": "node_31e82d51",
+        "type": "request",
+        "position": {
+          "x": 320.0,
+          "y": 180.0
+        },
+        "stepKey": "step_31e80640",
+        "label": "Request 1"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_start",
+        "source": "start",
+        "sourceHandle": "next",
+        "target": "node_31e82d51",
+        "targetHandle": "in"
+      }
+    ]
+  }
+}

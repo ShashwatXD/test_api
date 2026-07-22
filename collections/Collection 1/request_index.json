@@ -3,7 +3,7 @@
   "requests": [
     {
       "id": "jsonplaceholder.typicode.composts1_c39fe4e0",
-      "name": "",
+      "name": "jsonplaceholder.typicode.composts1",
       "apiType": "rest",
       "method": "get",
       "url": "https://jsonplaceholder.typicode.com/posts/1"

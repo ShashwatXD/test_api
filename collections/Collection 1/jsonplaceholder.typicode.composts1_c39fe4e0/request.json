@@ -1,7 +1,7 @@
 {
   "id": "jsonplaceholder.typicode.composts1_c39fe4e0",
   "apiType": "rest",
-  "name": "",
+  "name": "jsonplaceholder.typicode.composts1",
   "description": "",
   "httpRequestModel": {
     "method": "get",

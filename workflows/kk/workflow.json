@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "id": "kk",
+  "name": "kk",
+  "description": "Branch to different requests based on the HTTP status code.",
+  "createdAt": "2026-07-22T22:06:14.157093",
+  "modifiedAt": "2026-07-22T23:08:06.712226",
+  "viewport": {
+    "x": 0.0,
+    "y": 0.0,
+    "zoom": 1.0
+  },
+  "steps": {
+    "step_7462b230": {
+      "label": "Check API",
+      "request": {
+        "id": "7462b233-85eb-11f1-ba1a-978371d9a1bb",
+        "apiType": "rest",
+        "name": "Check API",
+        "description": "",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://httpbin.org/get",
+          "headers": null,
+          "params": null,
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isHeaderEnabledList": null,
+          "isParamEnabledList": null,
+          "bodyContentType": "json",
+          "body": null,
+          "query": null,
+          "formData": null
+        },
+        "responseStatus": null,
+        "message": null,
+        "httpResponseModel": null,
+        "preRequestScript": null,
+        "postRequestScript": null,
+        "aiRequestModel": null
+      }
+    },
+    "step_7462b231": {
+      "label": "Success path",
+      "request": {
+        "id": "74632760-85eb-11f1-ba1a-978371d9a1bb",
+        "apiType": "rest",
+        "name": "Success path",
+        "description": "",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://httpbin.org/uuid",
+          "headers": null,
+          "params": null,
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isHeaderEnabledList": null,
+          "isParamEnabledList": null,
+          "bodyContentType": "json",
+          "body": null,
+          "query": null,
+          "formData": null
+        },
+        "responseStatus": null,
+        "message": null,
+        "httpResponseModel": null,
+        "preRequestScript": null,
+        "postRequestScript": null,
+        "aiRequestModel": null
+      }
+    },
+    "step_7462b232": {
+      "label": "Failure path",
+      "request": {
+        "id": "74632761-85eb-11f1-ba1a-978371d9a1bb",
+        "apiType": "rest",
+        "name": "Failure path",
+        "description": "",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://httpbin.org/status/500",
+          "headers": null,
+          "params": null,
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isHeaderEnabledList": null,
+          "isParamEnabledList": null,
+          "bodyContentType": "json",
+          "body": null,
+          "query": null,
+          "formData": null
+        },
+        "responseStatus": null,
+        "message": null,
+        "httpResponseModel": null,
+        "preRequestScript": null,
+        "postRequestScript": null,
+        "aiRequestModel": null
+      }
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "manualStart",
+        "position": {
+          "x": 80.0,
+          "y": 120.0
+        },
+        "label": "Start"
+      },
+      {
+        "id": "node_probe",
+        "type": "request",
+        "position": {
+          "x": 350.0,
+          "y": 120.0
+        },
+        "stepKey": "step_7462b230",
+        "label": "Check API"
+      },
+      {
+        "id": "node_condition",
+        "type": "condition",
+        "position": {
+          "x": 793.4825758036185,
+          "y": 195.33579555814146
+        },
+        "label": "HTTP success?",
+        "conditionExpression": "status>=200&&status<300"
+      },
+      {
+        "id": "node_success",
+        "type": "request",
+        "position": {
+          "x": 1099.713258256726,
+          "y": -20.654300056588625
+        },
+        "stepKey": "step_7462b231",
+        "label": "Success path"
+      },
+      {
+        "id": "node_failure",
+        "type": "request",
+        "position": {
+          "x": 1080.0,
+          "y": 354.0
+        },
+        "stepKey": "step_7462b232",
+        "label": "Failure path"
+      },
+      {
+        "id": "node_e082ed60",
+        "type": "loop",
+        "position": {
+          "x": 669.4130535547629,
+          "y": 488.6682972014057
+        },
+        "label": "For each",
+        "loopMaxIterations": 5,
+        "loopMode": "repeat"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_start_probe",
+        "source": "start",
+        "sourceHandle": "next",
+        "target": "node_probe",
+        "targetHandle": "in"
+      },
+      {
+        "id": "edge_probe_condition",
+        "source": "node_probe",
+        "sourceHandle": "success",
+        "target": "node_condition",
+        "targetHandle": "in"
+      },
+      {
+        "id": "edge_condition_success",
+        "source": "node_condition",
+        "sourceHandle": "then",
+        "target": "node_success",
+        "targetHandle": "in"
+      },
+      {
+        "id": "edge_condition_failure",
+        "source": "node_condition",
+        "sourceHandle": "else",
+        "target": "node_failure",
+        "targetHandle": "in"
+      }
+    ]
+  }
+}
