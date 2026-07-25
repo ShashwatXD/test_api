@@ -1,26 +1,25 @@
 {
   "name": "Workflow 1",
-  "modifiedAt": "2026-07-25T23:51:10.332051",
   "nodes": [
     {
       "id": "start",
       "type": "start",
       "position": {
         "x": 80.0,
-        "y": 120.0
+        "y": 180.0
       },
       "label": "Start"
     },
     {
-      "id": "node_6c4d02a1",
+      "id": "node_1cbefe41",
       "type": "request",
       "position": {
-        "x": 650.0,
-        "y": 120.0
+        "x": 320.0,
+        "y": 180.0
       },
       "label": "Request 1",
       "request": {
-        "id": "6c4d02a0-8855-11f1-a4d1-d5db89f81fc4",
+        "id": "1cbefe40-8856-11f1-a99b-f1f97acb4999",
         "name": "Request 1",
         "httpRequestModel": {
           "method": "get",
@@ -38,29 +37,13 @@
           "bodyContentType": "json"
         }
       }
-    },
-    {
-      "id": "node_97275110",
-      "type": "delay",
-      "position": {
-        "x": 350.0,
-        "y": 120.0
-      },
-      "label": "Delay",
-      "ms": 1000
     }
   ],
   "edges": [
     {
-      "id": "edge_99a681e0",
+      "id": "edge_start",
       "from": "start",
-      "to": "node_97275110",
-      "out": "next"
-    },
-    {
-      "id": "edge_9a906cb0",
-      "from": "node_97275110",
-      "to": "node_6c4d02a1",
+      "to": "node_1cbefe41",
       "out": "next"
     }
   ]
