@@ -1,30 +1,30 @@
 {
   "name": "Workflow 1",
-  "modifiedAt": "2026-07-25T23:05:19.915621",
+  "modifiedAt": "2026-07-25T23:49:49.577345",
   "nodes": [
     {
       "id": "start",
       "type": "start",
       "position": {
         "x": 80.0,
-        "y": 120.0
+        "y": 180.0
       },
       "label": "Start"
     },
     {
-      "id": "node_ba429c71",
+      "id": "node_6c4d02a1",
       "type": "request",
       "position": {
-        "x": 650.0,
-        "y": 120.0
+        "x": 320.0,
+        "y": 180.0
       },
       "label": "Request 1",
       "request": {
-        "id": "ba429c70-8843-11f1-a794-810c9f96db79",
+        "id": "6c4d02a0-8855-11f1-a4d1-d5db89f81fc4",
         "name": "Request 1",
         "httpRequestModel": {
           "method": "get",
-          "url": "https://jsonplaceholder.typicode.com/posts",
+          "url": "https://",
           "authModel": {
             "type": "none",
             "apikey": null,
@@ -38,31 +38,14 @@
           "bodyContentType": "json"
         }
       }
-    },
-    {
-      "id": "node_d2b80e20",
-      "type": "delay",
-      "position": {
-        "x": 350.0,
-        "y": 120.0
-      },
-      "label": "Delay",
-      "ms": 1000
     }
   ],
   "edges": [
     {
-      "id": "edge_17ec8c70",
-      "from": "node_d2b80e20",
-      "to": "node_ba429c71",
-      "out": "next"
-    },
-    {
-      "id": "edge_b7517320",
+      "id": "edge_start",
       "from": "start",
-      "to": "node_d2b80e20",
+      "to": "node_6c4d02a1",
       "out": "next"
     }
-  ],
-  "id": "Workflow 1"
+  ]
 }
