@@ -1,0 +1,40 @@
+{
+  "id": "ssss_a078d270",
+  "apiType": "rest",
+  "name": "ssss",
+  "description": "",
+  "httpRequestModel": {
+    "method": "get",
+    "url": "ssss",
+    "headers": null,
+    "params": [
+      {
+        "name": "sss",
+        "value": "sss"
+      }
+    ],
+    "authModel": {
+      "type": "apiKey",
+      "apikey": null,
+      "bearer": null,
+      "basic": null,
+      "jwt": null,
+      "digest": null,
+      "oauth1": null,
+      "oauth2": null
+    },
+    "isHeaderEnabledList": null,
+    "isParamEnabledList": [
+      true
+    ],
+    "bodyContentType": "json",
+    "body": "",
+    "query": null,
+    "formData": null
+  },
+  "responseStatus": null,
+  "message": null,
+  "preRequestScript": null,
+  "postRequestScript": null,
+  "aiRequestModel": null
+}

@@ -5,7 +5,7 @@
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "https://jsonplaceholder.typicode.com/posts/1 ",
+    "url": "https://jsonplaceholder.typicode.com/posts/1s ",
     "headers": [],
     "params": [],
     "authModel": {
@@ -21,7 +21,7 @@
     "isHeaderEnabledList": [],
     "isParamEnabledList": [],
     "bodyContentType": "json",
-    "body": null,
+    "body": "",
     "query": null,
     "formData": null
   },

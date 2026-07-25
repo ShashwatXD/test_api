@@ -1,0 +1,68 @@
+{
+  "name": "Workflow 1",
+  "modifiedAt": "2026-07-25T23:05:19.915621",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 120.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "node_ba429c71",
+      "type": "request",
+      "position": {
+        "x": 650.0,
+        "y": 120.0
+      },
+      "label": "Request 1",
+      "request": {
+        "id": "ba429c70-8843-11f1-a794-810c9f96db79",
+        "name": "Request 1",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://jsonplaceholder.typicode.com/posts",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      }
+    },
+    {
+      "id": "node_d2b80e20",
+      "type": "delay",
+      "position": {
+        "x": 350.0,
+        "y": 120.0
+      },
+      "label": "Delay",
+      "ms": 1000
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_17ec8c70",
+      "from": "node_d2b80e20",
+      "to": "node_ba429c71",
+      "out": "next"
+    },
+    {
+      "id": "edge_b7517320",
+      "from": "start",
+      "to": "node_d2b80e20",
+      "out": "next"
+    }
+  ],
+  "id": "Workflow 1"
+}
