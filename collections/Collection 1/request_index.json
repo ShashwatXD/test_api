@@ -2,6 +2,13 @@
   "name": "Collection 1",
   "requests": [
     {
+      "id": "sasa_bcb082a0",
+      "name": "sasa",
+      "apiType": "rest",
+      "method": "get",
+      "url": "sasa"
+    },
+    {
       "id": "ssss_a078d270",
       "name": "ssss",
       "apiType": "rest",

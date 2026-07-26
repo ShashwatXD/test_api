@@ -1,0 +1,33 @@
+{
+  "id": "sasa_bcb082a0",
+  "apiType": "rest",
+  "name": "sasa",
+  "description": "",
+  "httpRequestModel": {
+    "method": "get",
+    "url": "sasa",
+    "headers": null,
+    "params": null,
+    "authModel": {
+      "type": "none",
+      "apikey": null,
+      "bearer": null,
+      "basic": null,
+      "jwt": null,
+      "digest": null,
+      "oauth1": null,
+      "oauth2": null
+    },
+    "isHeaderEnabledList": null,
+    "isParamEnabledList": null,
+    "bodyContentType": "json",
+    "body": null,
+    "query": null,
+    "formData": null
+  },
+  "responseStatus": null,
+  "message": null,
+  "preRequestScript": null,
+  "postRequestScript": null,
+  "aiRequestModel": null
+}

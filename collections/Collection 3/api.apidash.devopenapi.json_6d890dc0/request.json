@@ -1,33 +1,21 @@
 {
   "id": "api.apidash.devopenapi.json_6d890dc0",
-  "apiType": "rest",
+  "apiType": "ai",
   "name": "api.apidash.devopenapi.json",
   "description": "",
-  "httpRequestModel": {
-    "method": "get",
-    "url": "https://api.apidash.dev/openapi.json",
-    "headers": null,
-    "params": null,
-    "authModel": {
-      "type": "none",
-      "apikey": null,
-      "bearer": null,
-      "basic": null,
-      "jwt": null,
-      "digest": null,
-      "oauth1": null,
-      "oauth2": null
-    },
-    "isHeaderEnabledList": null,
-    "isParamEnabledList": null,
-    "bodyContentType": "json",
-    "body": null,
-    "query": null,
-    "formData": null
-  },
+  "httpRequestModel": null,
   "responseStatus": 200,
   "message": "OK",
   "preRequestScript": null,
   "postRequestScript": null,
-  "aiRequestModel": null
+  "aiRequestModel": {
+    "modelApiProvider": null,
+    "url": "",
+    "model": null,
+    "apiKey": null,
+    "system_prompt": "",
+    "user_prompt": "",
+    "model_configs": [],
+    "stream": null
+  }
 }

@@ -1,10 +1,10 @@
 {
-  "id": "global",
-  "name": "Global Variables",
+  "id": "untitled_a6283320",
+  "name": "",
   "values": [
     {
       "key": "userId",
-      "value": "xyz",
+      "value": "abc",
       "type": "variable",
       "enabled": true
     }

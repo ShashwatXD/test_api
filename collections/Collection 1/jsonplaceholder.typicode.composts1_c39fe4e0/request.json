@@ -7,7 +7,12 @@
     "method": "get",
     "url": "https://jsonplaceholder.typicode.com/posts/1s ",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "{{userId}}",
+        "value": ""
+      }
+    ],
     "authModel": {
       "type": "none",
       "apikey": null,
@@ -19,7 +24,9 @@
       "oauth2": null
     },
     "isHeaderEnabledList": [],
-    "isParamEnabledList": [],
+    "isParamEnabledList": [
+      true
+    ],
     "bodyContentType": "json",
     "body": "",
     "query": null,

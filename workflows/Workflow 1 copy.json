@@ -14,8 +14,8 @@
       "id": "node_06b50b51",
       "type": "request",
       "position": {
-        "x": 357.63671875,
-        "y": 411.953125
+        "x": 350.0,
+        "y": 120.0
       },
       "label": "Request 1",
       "request": {
