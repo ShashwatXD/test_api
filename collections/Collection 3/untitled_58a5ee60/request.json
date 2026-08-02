@@ -1,0 +1,64 @@
+{
+  "id": "untitled_58a5ee60",
+  "apiType": "ai",
+  "name": "",
+  "description": "",
+  "httpRequestModel": {
+    "method": "get",
+    "url": "",
+    "headers": null,
+    "params": null,
+    "authModel": {
+      "type": "none",
+      "apikey": null,
+      "bearer": null,
+      "basic": null,
+      "jwt": null,
+      "digest": null,
+      "oauth1": null,
+      "oauth2": null
+    },
+    "isHeaderEnabledList": null,
+    "isParamEnabledList": null,
+    "bodyContentType": "json",
+    "body": null,
+    "query": null,
+    "formData": null
+  },
+  "responseStatus": -1,
+  "message": "RangeError (length): Invalid value: Only valid value is 0: 1",
+  "preRequestScript": null,
+  "postRequestScript": null,
+  "aiRequestModel": {
+    "modelApiProvider": "anthropic",
+    "url": "https://api.anthropic.com/v1/messages",
+    "model": "claude-opus-4-6",
+    "apiKey": null,
+    "system_prompt": "",
+    "user_prompt": "",
+    "model_configs": [
+      {
+        "id": "temperature",
+        "name": "Temperature",
+        "description": "The Temperature of the Model",
+        "type": "slider",
+        "value": "[0.0,0.5,1.0]"
+      },
+      {
+        "id": "top_p",
+        "name": "Top P",
+        "description": "The Top P of the Model",
+        "type": "slider",
+        "value": "[0.0,0.95,1.0]"
+      },
+      {
+        "id": "max_tokens",
+        "name": "Maximum Tokens",
+        "description": "The maximum number of tokens allowed in the output",
+        "type": "numeric",
+        "value": "1024"
+      }
+    ],
+    "stream": false
+  }
+}

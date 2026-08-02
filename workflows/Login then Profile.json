@@ -1,0 +1,85 @@
+{
+  "name": "Login then Profile",
+  "description": "This starts a request for API authentication, fetching an access token and then using that to fetch profile details.",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 180.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "node_auth_login",
+      "type": "request",
+      "position": {
+        "x": 320.0,
+        "y": 180.0
+      },
+      "label": "POST /auth/login",
+      "request": {
+        "id": "req_auth_login",
+        "httpRequestModel": {
+          "method": "post",
+          "url": "/auth/login",
+          "headers": [],
+          "body": "{\"username\":\"api_user\",\"password\":\"pass123\"}"
+        }
+      },
+      "extract": [
+        {
+          "var": "access_token",
+          "path": "token"
+        }
+      ]
+    },
+    {
+      "id": "node_profile",
+      "type": "request",
+      "position": {
+        "x": 720.94140625,
+        "y": 182.62109375
+      },
+      "label": "GET /profile with Authorization header",
+      "request": {
+        "id": "req_profile",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "/profile",
+          "headers": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{access_token}}"
+            }
+          ],
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_614a3dd0",
+      "from": "start",
+      "to": "node_auth_login",
+      "out": "next"
+    },
+    {
+      "id": "edge_6240abc0",
+      "from": "node_auth_login",
+      "to": "node_profile"
+    }
+  ]
+}

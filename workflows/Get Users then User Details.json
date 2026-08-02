@@ -1,5 +1,5 @@
 {
-  "name": "Workflow 1",
+  "name": "Get Users then User Details",
   "nodes": [
     {
       "id": "start",
@@ -11,25 +11,18 @@
       "label": "Start"
     },
     {
-      "id": "node_06b50b51",
+      "id": "list_users_id",
       "type": "request",
       "position": {
         "x": 368.0,
         "y": 120.0
       },
-      "label": "Request 1",
+      "label": "List User IDs (extracted)",
       "request": {
-        "id": "06b50b50-8877-11f1-8d92-591274c614a5",
-        "name": "Request 1",
+        "id": "req_list_users_id",
         "httpRequestModel": {
           "method": "get",
-          "url": "https://jsonplaceholder.typicode.com/posts",
-          "params": [
-            {
-              "name": "xyz",
-              "value": "{{userId}}"
-            }
-          ],
+          "url": "https://api.apidash.dev/users",
           "authModel": {
             "type": "none",
             "apikey": null,
@@ -40,55 +33,29 @@
             "oauth1": null,
             "oauth2": null
           },
-          "isParamEnabledList": [
-            true
-          ],
           "bodyContentType": "json"
         }
-      }
-    },
-    {
-      "id": "node_246d1390",
-      "type": "request",
-      "position": {
-        "x": 780.765625,
-        "y": 45.53125
       },
-      "label": "Request 1 copy",
-      "request": {
-        "id": "246d1391-8877-11f1-8d92-591274c614a5",
-        "name": "Request 1 copy",
-        "httpRequestModel": {
-          "method": "get",
-          "url": "https://jsonplaceholder.typicode.com/posts",
-          "authModel": {
-            "type": "none",
-            "apikey": null,
-            "bearer": null,
-            "basic": null,
-            "jwt": null,
-            "digest": null,
-            "oauth1": null,
-            "oauth2": null
-          },
-          "bodyContentType": "json"
+      "extract": [
+        {
+          "var": "userId",
+          "path": "data.0.id"
         }
-      }
+      ]
     },
     {
-      "id": "node_48b482a1",
+      "id": "get_user_details",
       "type": "request",
       "position": {
-        "x": 778.0,
+        "x": 368.0,
         "y": 354.0
       },
-      "label": "AI Request 3",
+      "label": "User Details (extracted)",
       "request": {
-        "id": "48b482a0-8904-11f1-8afd-ed75730daad5",
-        "apiType": "ai",
-        "name": "AI Request 3",
+        "id": "req_get_user_details",
         "httpRequestModel": {
           "method": "get",
+          "url": "https://api.apidash.dev/users/1",
           "authModel": {
             "type": "none",
             "apikey": null,
@@ -100,36 +67,72 @@
             "oauth2": null
           },
           "bodyContentType": "json"
-        },
-        "aiRequestModel": {
-          "modelApiProvider": null,
-          "url": "",
-          "model": null,
-          "apiKey": null,
-          "system_prompt": "",
-          "user_prompt": "",
-          "model_configs": [],
-          "stream": null
         }
-      }
+      },
+      "extract": [
+        {
+          "var": "name",
+          "path": "name"
+        }
+      ]
+    },
+    {
+      "id": "node_1d6d8480",
+      "type": "request",
+      "position": {
+        "x": 763.93359375,
+        "y": 141.03125
+      },
+      "label": "List User IDs (extracted) copy",
+      "request": {
+        "id": "1d6d8481-8e3a-11f1-9442-1fe34c4f573a",
+        "name": "List User IDs (extracted) copy",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://api.apidash.dev/users/{{name}}",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      },
+      "extract": [
+        {
+          "var": "userId",
+          "path": "data.0.id"
+        }
+      ]
     }
   ],
   "edges": [
     {
-      "id": "edge_start",
+      "id": "e1",
       "from": "start",
-      "to": "node_06b50b51",
+      "to": "list_users_id",
       "out": "next"
     },
     {
-      "id": "edge_45633a60",
-      "from": "node_06b50b51",
-      "to": "node_246d1390"
+      "id": "edge_f08dc920",
+      "from": "start",
+      "to": "get_user_details",
+      "out": "next"
     },
     {
-      "id": "edge_48b4a9b0",
-      "from": "node_06b50b51",
-      "to": "node_48b482a1"
+      "id": "edge_1fca1220",
+      "from": "get_user_details",
+      "to": "node_1d6d8480"
+    },
+    {
+      "id": "edge_209d1990",
+      "from": "list_users_id",
+      "to": "node_1d6d8480"
     }
   ]
 }

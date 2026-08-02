@@ -1,20 +1,15 @@
 {
-  "id": "ssss_a078d270",
+  "id": "untitled_37c395b0",
   "apiType": "rest",
-  "name": "ssss",
+  "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "ssss",
+    "url": "",
     "headers": null,
-    "params": [
-      {
-        "name": "sss",
-        "value": "sss"
-      }
-    ],
+    "params": null,
     "authModel": {
-      "type": "apiKey",
+      "type": "none",
       "apikey": null,
       "bearer": null,
       "basic": null,
@@ -24,11 +19,9 @@
       "oauth2": null
     },
     "isHeaderEnabledList": null,
-    "isParamEnabledList": [
-      true
-    ],
+    "isParamEnabledList": null,
     "bodyContentType": "json",
-    "body": "",
+    "body": null,
     "query": null,
     "formData": null
   },

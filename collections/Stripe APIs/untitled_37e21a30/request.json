@@ -1,11 +1,11 @@
 {
-  "id": "sasa_bcb082a0",
+  "id": "untitled_37e21a30",
   "apiType": "rest",
-  "name": "sasa",
+  "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "sasa",
+    "url": "",
     "headers": null,
     "params": null,
     "authModel": {

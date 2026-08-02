@@ -1,0 +1,19 @@
+{
+  "name": "Stripe APIs",
+  "requests": [
+    {
+      "id": "untitled_37c395b0",
+      "name": "",
+      "apiType": "rest",
+      "method": "get",
+      "url": ""
+    },
+    {
+      "id": "untitled_37e21a30",
+      "name": "",
+      "apiType": "rest",
+      "method": "get",
+      "url": ""
+    }
+  ]
+}

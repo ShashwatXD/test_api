@@ -1,5 +1,5 @@
 {
-  "name": "Workflow 1",
+  "name": "Workflow 1 copy",
   "nodes": [
     {
       "id": "start",
@@ -14,7 +14,7 @@
       "id": "node_06b50b51",
       "type": "request",
       "position": {
-        "x": 350.0,
+        "x": 368.0,
         "y": 120.0
       },
       "label": "Request 1",
@@ -51,7 +51,7 @@
       "id": "node_246d1390",
       "type": "request",
       "position": {
-        "x": 760.0,
+        "x": 778.0,
         "y": 120.0
       },
       "label": "Request 1 copy",
@@ -74,6 +74,43 @@
           "bodyContentType": "json"
         }
       }
+    },
+    {
+      "id": "node_7aa3bd60",
+      "type": "request",
+      "position": {
+        "x": 368.0,
+        "y": 354.0
+      },
+      "label": "Request 1 copy",
+      "request": {
+        "id": "7aa3bd61-8e38-11f1-a8f2-d7a39fbdda10",
+        "name": "Request 1 copy",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://jsonplaceholder.typicode.com/posts",
+          "params": [
+            {
+              "name": "xyz",
+              "value": "{{userId}}"
+            }
+          ],
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isParamEnabledList": [
+            true
+          ],
+          "bodyContentType": "json"
+        }
+      }
     }
   ],
   "edges": [
@@ -84,9 +121,10 @@
       "out": "next"
     },
     {
-      "id": "edge_45633a60",
-      "from": "node_06b50b51",
-      "to": "node_246d1390"
+      "id": "edge_7c667c00",
+      "from": "start",
+      "to": "node_7aa3bd60",
+      "out": "next"
     }
   ]
 }

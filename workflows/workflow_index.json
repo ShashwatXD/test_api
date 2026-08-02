@@ -2,6 +2,8 @@
   "workflows": [
     "Workflow 1",
     "Workflow 1 copy",
-    "Workflow 3"
+    "Workflow 3",
+    "Login then Profile",
+    "Get Users then User Details"
   ]
 }
