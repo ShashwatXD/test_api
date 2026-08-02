@@ -51,8 +51,8 @@
       "id": "node_246d1390",
       "type": "request",
       "position": {
-        "x": 780.765625,
-        "y": 45.53125
+        "x": 778.0,
+        "y": 120.0
       },
       "label": "Request 1 copy",
       "request": {
@@ -112,19 +112,103 @@
           "stream": null
         }
       }
+    },
+    {
+      "id": "node_555c4ac0",
+      "type": "request",
+      "position": {
+        "x": 778.0,
+        "y": 588.0
+      },
+      "label": "Request 1 copy",
+      "request": {
+        "id": "555c4ac1-8e6c-11f1-92f1-795b598c4758",
+        "name": "Request 1 copy",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://jsonplaceholder.typicode.com/poss",
+          "params": [
+            {
+              "name": "xyz",
+              "value": "{{userId}}"
+            }
+          ],
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isParamEnabledList": [
+            true
+          ],
+          "bodyContentType": "json"
+        }
+      }
+    },
+    {
+      "id": "node_808e71a0",
+      "type": "request",
+      "position": {
+        "x": 1188.0,
+        "y": 120.0
+      },
+      "label": "Request 1 copy copy",
+      "request": {
+        "id": "808e71a1-8e76-11f1-b75c-896672333050",
+        "name": "Request 1 copy copy",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://jsonplaceholder.typicode.com/poss",
+          "params": [
+            {
+              "name": "xyz",
+              "value": "{{userId}}"
+            }
+          ],
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "isParamEnabledList": [
+            true
+          ],
+          "bodyContentType": "json"
+        }
+      }
     }
   ],
   "edges": [
     {
-      "id": "edge_start",
-      "from": "start",
-      "to": "node_06b50b51",
-      "out": "next"
-    },
-    {
       "id": "edge_45633a60",
       "from": "node_06b50b51",
       "to": "node_246d1390"
+    },
+    {
+      "id": "edge_eea8c9c0",
+      "from": "node_06b50b51",
+      "to": "node_48b482a1"
+    },
+    {
+      "id": "edge_57e71450",
+      "from": "node_06b50b51",
+      "to": "node_555c4ac0"
+    },
+    {
+      "id": "start_next_node_06b50b51_in",
+      "from": "start",
+      "to": "node_06b50b51",
+      "out": "next"
     }
   ]
 }

@@ -4,8 +4,8 @@
   "values": [
     {
       "key": "userId",
-      "value": "xyz",
-      "type": "variable",
+      "value": "",
+      "type": "secret",
       "enabled": true
     }
   ]

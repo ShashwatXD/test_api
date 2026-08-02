@@ -1,0 +1,76 @@
+{
+  "name": "User detail chain",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 120.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "list_users",
+      "type": "request",
+      "position": {
+        "x": 429.45703125,
+        "y": 484.828125
+      },
+      "label": "List users",
+      "request": {
+        "id": "req_list_users",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://api.apidash.dev/users",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      },
+      "extract": [
+        {
+          "var": "userId",
+          "path": "data.0.id"
+        }
+      ]
+    },
+    {
+      "id": "get_user",
+      "type": "request",
+      "position": {
+        "x": 966.8671875,
+        "y": 178.69921875
+      },
+      "label": "Get user",
+      "request": {
+        "id": "req_get_user",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://api.apidash.dev/users/{{userId}}"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "start",
+      "to": "list_users",
+      "out": "next"
+    },
+    {
+      "id": "e2",
+      "from": "list_users",
+      "to": "get_user"
+    }
+  ]
+}
