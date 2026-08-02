@@ -1,12 +1,12 @@
 {
-  "id": "untitled_37e21a30",
+  "id": "ss_37e21a30",
   "apiType": "rest",
-  "name": "",
+  "name": "ss",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "",
-    "headers": null,
+    "url": "ss",
+    "headers": [],
     "params": null,
     "authModel": {
       "type": "none",
@@ -18,7 +18,7 @@
       "oauth1": null,
       "oauth2": null
     },
-    "isHeaderEnabledList": null,
+    "isHeaderEnabledList": [],
     "isParamEnabledList": null,
     "bodyContentType": "json",
     "body": null,

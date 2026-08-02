@@ -9,11 +9,11 @@
       "url": ""
     },
     {
-      "id": "untitled_37e21a30",
-      "name": "",
+      "id": "ss_37e21a30",
+      "name": "ss",
       "apiType": "rest",
       "method": "get",
-      "url": ""
+      "url": "ss"
     }
   ]
 }

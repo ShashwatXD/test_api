@@ -1,0 +1,50 @@
+{
+  "name": "Workflow 6",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 180.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "node_4ead6181",
+      "type": "request",
+      "position": {
+        "x": 531.7667157397196,
+        "y": 280.30203495693365
+      },
+      "label": "Request 1",
+      "request": {
+        "id": "4ead6180-8e41-11f1-9520-176ceba899fa",
+        "name": "Request 1",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_start",
+      "from": "start",
+      "to": "node_4ead6181",
+      "out": "next"
+    }
+  ]
+}

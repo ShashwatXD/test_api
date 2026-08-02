@@ -125,11 +125,6 @@
       "id": "edge_45633a60",
       "from": "node_06b50b51",
       "to": "node_246d1390"
-    },
-    {
-      "id": "edge_48b4a9b0",
-      "from": "node_06b50b51",
-      "to": "node_48b482a1"
     }
   ]
 }

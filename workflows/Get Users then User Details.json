@@ -14,8 +14,8 @@
       "id": "list_users_id",
       "type": "request",
       "position": {
-        "x": 368.0,
-        "y": 120.0
+        "x": 366.0,
+        "y": 92.0
       },
       "label": "List User IDs (extracted)",
       "request": {
@@ -35,13 +35,7 @@
           },
           "bodyContentType": "json"
         }
-      },
-      "extract": [
-        {
-          "var": "userId",
-          "path": "data.0.id"
-        }
-      ]
+      }
     },
     {
       "id": "get_user_details",
@@ -80,8 +74,8 @@
       "id": "node_1d6d8480",
       "type": "request",
       "position": {
-        "x": 763.93359375,
-        "y": 141.03125
+        "x": 778.0,
+        "y": 120.0
       },
       "label": "List User IDs (extracted) copy",
       "request": {
@@ -89,7 +83,7 @@
         "name": "List User IDs (extracted) copy",
         "httpRequestModel": {
           "method": "get",
-          "url": "https://api.apidash.dev/users/{{name}}",
+          "url": "https://api.apidash.dev/users/{{userId}}",
           "authModel": {
             "type": "none",
             "apikey": null,
@@ -119,20 +113,15 @@
       "out": "next"
     },
     {
-      "id": "edge_f08dc920",
-      "from": "start",
-      "to": "get_user_details",
-      "out": "next"
-    },
-    {
-      "id": "edge_1fca1220",
-      "from": "get_user_details",
-      "to": "node_1d6d8480"
-    },
-    {
       "id": "edge_209d1990",
       "from": "list_users_id",
       "to": "node_1d6d8480"
+    },
+    {
+      "id": "edge_2da82a10",
+      "from": "start",
+      "to": "get_user_details",
+      "out": "next"
     }
   ]
 }
