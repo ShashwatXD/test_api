@@ -14,8 +14,8 @@
       "id": "list_users",
       "type": "request",
       "position": {
-        "x": 429.45703125,
-        "y": 484.828125
+        "x": 368.0,
+        "y": 120.0
       },
       "label": "List users",
       "request": {
@@ -47,8 +47,8 @@
       "id": "get_user",
       "type": "request",
       "position": {
-        "x": 966.8671875,
-        "y": 178.69921875
+        "x": 778.0,
+        "y": 120.0
       },
       "label": "Get user",
       "request": {
@@ -58,6 +58,77 @@
           "url": "https://api.apidash.dev/users/{{userId}}"
         }
       }
+    },
+    {
+      "id": "node_57bfed01",
+      "type": "request",
+      "position": {
+        "x": 659.0390625,
+        "y": 550.32421875
+      },
+      "label": "AI Request 3",
+      "request": {
+        "id": "57bfed00-90cc-11f1-9e3f-df1aa21cf233",
+        "apiType": "ai",
+        "name": "AI Request 3",
+        "httpRequestModel": {
+          "method": "get",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        },
+        "aiRequestModel": {
+          "modelApiProvider": "azureopenai",
+          "url": "",
+          "model": "",
+          "apiKey": null,
+          "system_prompt": "",
+          "user_prompt": "",
+          "model_configs": [
+            {
+              "id": "temperature",
+              "name": "Temperature",
+              "description": "The Temperature of the Model",
+              "type": "slider",
+              "value": "[0.0,0.5,1.0]"
+            },
+            {
+              "id": "top_p",
+              "name": "Top P",
+              "description": "The Top P of the Model",
+              "type": "slider",
+              "value": "[0.0,0.95,1.0]"
+            },
+            {
+              "id": "max_tokens",
+              "name": "Maximum Tokens",
+              "description": "The maximum number of tokens allowed in the output",
+              "type": "numeric",
+              "value": "1024"
+            }
+          ],
+          "stream": false
+        }
+      }
+    },
+    {
+      "id": "node_92b4a110",
+      "type": "sequence",
+      "position": {
+        "x": 700.69140625,
+        "y": 382.27734375
+      },
+      "label": "Sequence",
+      "source": "list",
+      "as": "batch"
     }
   ],
   "edges": [

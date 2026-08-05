@@ -1,12 +1,12 @@
 {
-  "id": "ss_37e21a30",
-  "apiType": "rest",
-  "name": "ss",
+  "id": "untitled_00d72070",
+  "apiType": "ai",
+  "name": "",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "ss",
-    "headers": [],
+    "url": "",
+    "headers": null,
     "params": null,
     "authModel": {
       "type": "none",
@@ -18,7 +18,7 @@
       "oauth1": null,
       "oauth2": null
     },
-    "isHeaderEnabledList": [],
+    "isHeaderEnabledList": null,
     "isParamEnabledList": null,
     "bodyContentType": "json",
     "body": null,
@@ -29,5 +29,14 @@
   "message": null,
   "preRequestScript": null,
   "postRequestScript": null,
-  "aiRequestModel": null
+  "aiRequestModel": {
+    "modelApiProvider": "openai",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "gpt-4o",
+    "apiKey": null,
+    "system_prompt": "",
+    "user_prompt": "",
+    "model_configs": [],
+    "stream": null
+  }
 }

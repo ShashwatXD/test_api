@@ -2,18 +2,18 @@
   "name": "new APIs",
   "requests": [
     {
-      "id": "untitled_37c395b0",
+      "id": "untitled_00d72070",
       "name": "",
+      "apiType": "ai",
+      "method": "get",
+      "url": "https://openrouter.ai/api/v1/chat/completions"
+    },
+    {
+      "id": "s_37c395b0",
+      "name": "s",
       "apiType": "rest",
       "method": "get",
       "url": ""
-    },
-    {
-      "id": "ss_37e21a30",
-      "name": "ss",
-      "apiType": "rest",
-      "method": "get",
-      "url": "ss"
     }
   ]
 }

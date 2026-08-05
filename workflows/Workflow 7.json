@@ -1,0 +1,73 @@
+{
+  "name": "Workflow 7",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 120.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "node_f9bdde31",
+      "type": "request",
+      "position": {
+        "x": 923.8984375,
+        "y": 120.0
+      },
+      "label": "Request 1",
+      "request": {
+        "id": "f9bdde30-8e94-11f1-a38c-ddb7628732d8",
+        "name": "Request 1",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://{{abc}}",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      }
+    },
+    {
+      "id": "node_80fb9f40",
+      "type": "sequence",
+      "position": {
+        "x": 246.41796875,
+        "y": 424.74609375
+      },
+      "label": "Sequence",
+      "source": "list",
+      "value": "[a,b,c]",
+      "as": "batch"
+    },
+    {
+      "id": "node_d12ca4f0",
+      "type": "loop",
+      "position": {
+        "x": 578.10546875,
+        "y": 209.265625
+      },
+      "label": "For each",
+      "items": "var:batch",
+      "as": "abc"
+    }
+  ],
+  "edges": [
+    {
+      "id": "node_d12ca4f0_next_node_f9bdde31_in",
+      "from": "node_d12ca4f0",
+      "to": "node_f9bdde31",
+      "out": "next"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "name": "Workflow 6",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "position": {
+        "x": 80.0,
+        "y": 180.0
+      },
+      "label": "Start"
+    },
+    {
+      "id": "node_4ead6181",
+      "type": "request",
+      "position": {
+        "x": 531.7667157397196,
+        "y": 480.29812870693365
+      },
+      "label": "Request 1",
+      "request": {
+        "id": "4ead6180-8e41-11f1-9520-176ceba899fa",
+        "name": "Request 1",
+        "httpRequestModel": {
+          "method": "get",
+          "url": "https://",
+          "authModel": {
+            "type": "none",
+            "apikey": null,
+            "bearer": null,
+            "basic": null,
+            "jwt": null,
+            "digest": null,
+            "oauth1": null,
+            "oauth2": null
+          },
+          "bodyContentType": "json"
+        }
+      }
+    },
+    {
+      "id": "node_6c9168b1",
+      "type": "request",
+      "position": {
+        "x": 954.3878094897196,
+        "y": 236.64359745693366
+      },
+      "label": "AI Request 2",
+      "request": {
+        "id": "6c9168b0-8e76-11f1-b75c-896672333050",
+        "apiType": "ai",
+        "name": "AI Request 2",
+        "aiRequestModel": {
+          "modelApiProvider": "customopenai",
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "model": "gpt-4o",
+          "apiKey": null,
+          "system_prompt": "",
+          "user_prompt": "",
+          "model_configs": [],
+          "stream": null
+        }
+      }
+    },
+    {
+      "id": "node_72645860",
+      "type": "loop",
+      "position": {
+        "x": 1002.3878094897196,
+        "y": 504.59672245693366
+      },
+      "label": "For each",
+      "items": "var:items"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_start",
+      "from": "start",
+      "to": "node_4ead6181",
+      "out": "next"
+    },
+    {
+      "id": "node_4ead6181_success_node_72645860_in",
+      "from": "node_4ead6181",
+      "to": "node_72645860"
+    }
+  ]
+}

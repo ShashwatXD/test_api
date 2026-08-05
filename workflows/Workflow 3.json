@@ -14,7 +14,7 @@
       "id": "node_af46c961",
       "type": "request",
       "position": {
-        "x": 350.0,
+        "x": 368.0,
         "y": 120.0
       },
       "label": "Request 1",
@@ -48,7 +48,7 @@
       "id": "node_ccdcf1c1",
       "type": "request",
       "position": {
-        "x": 1128.0,
+        "x": 1146.0,
         "y": 120.0
       },
       "label": "Request 2",
@@ -57,7 +57,7 @@
         "name": "Request 2",
         "httpRequestModel": {
           "method": "get",
-          "url": "https://api.apidash.dev/users/{{userID}}",
+          "url": "https://api.apidash.dev/users/{{userId}}",
           "authModel": {
             "type": "none",
             "apikey": null,
@@ -76,14 +76,25 @@
       "id": "node_08b33e20",
       "type": "loop",
       "position": {
-        "x": 760.0,
+        "x": 778.0,
         "y": 120.0
       },
       "label": "For each",
-      "items": "var:users",
-      "max": 3,
-      "field": "id",
-      "as": "userID"
+      "items": "var:batch",
+      "max": 5,
+      "field": "prompt",
+      "as": "userId"
+    },
+    {
+      "id": "node_ef656e90",
+      "type": "sequence",
+      "position": {
+        "x": 786.0,
+        "y": 308.0
+      },
+      "label": "Sequence",
+      "source": "jsonl",
+      "as": "batch"
     }
   ],
   "edges": [
@@ -94,15 +105,22 @@
       "out": "next"
     },
     {
-      "id": "edge_661493c0",
-      "from": "node_af46c961",
-      "to": "node_08b33e20"
-    },
-    {
       "id": "edge_7c4804b0",
       "from": "node_08b33e20",
       "to": "node_ccdcf1c1",
       "out": "next"
+    },
+    {
+      "id": "node_af46c961_success_node_08b33e20_in",
+      "from": "node_af46c961",
+      "to": "node_08b33e20"
+    },
+    {
+      "id": "node_08b33e20_list_node_ef656e90_next",
+      "from": "node_ef656e90",
+      "to": "node_08b33e20",
+      "out": "next",
+      "in": "list"
     }
   ]
 }
