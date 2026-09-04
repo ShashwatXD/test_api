@@ -1,11 +1,11 @@
 {
-  "id": "my_api_e7438c40",
+  "id": "my_api-(copy)_03b4d1c0",
   "apiType": "rest",
-  "name": "my_api",
+  "name": "my_api (copy)",
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "https://www.google.com/robots.txt2",
+    "url": "https://www.google.com/robots.txt",
     "headers": null,
     "params": null,
     "authModel": {
@@ -25,8 +25,8 @@
     "query": null,
     "formData": null
   },
-  "responseStatus": 200,
-  "message": "OK",
+  "responseStatus": null,
+  "message": null,
   "preRequestScript": null,
   "postRequestScript": null,
   "aiRequestModel": null
