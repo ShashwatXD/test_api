@@ -1,0 +1,12 @@
+{
+  "id": "global",
+  "name": "Global Variables",
+  "values": [
+    {
+      "key": "a",
+      "value": "abcd",
+      "type": "variable",
+      "enabled": true
+    }
+  ]
+}

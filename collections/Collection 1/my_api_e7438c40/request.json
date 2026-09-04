@@ -1,0 +1,33 @@
+{
+  "id": "my_api_e7438c40",
+  "apiType": "rest",
+  "name": "my_api",
+  "description": "",
+  "httpRequestModel": {
+    "method": "get",
+    "url": "https://www.google.com/robots.txt",
+    "headers": null,
+    "params": null,
+    "authModel": {
+      "type": "none",
+      "apikey": null,
+      "bearer": null,
+      "basic": null,
+      "jwt": null,
+      "digest": null,
+      "oauth1": null,
+      "oauth2": null
+    },
+    "isHeaderEnabledList": null,
+    "isParamEnabledList": null,
+    "bodyContentType": "json",
+    "body": null,
+    "query": null,
+    "formData": null
+  },
+  "responseStatus": 200,
+  "message": "OK",
+  "preRequestScript": null,
+  "postRequestScript": null,
+  "aiRequestModel": null
+}
