@@ -7,13 +7,6 @@
       "apiType": "rest",
       "method": "get",
       "url": "https://www.google.com/robots.txt"
-    },
-    {
-      "id": "my_api-(copy)_946cf720",
-      "name": "my_api (copy)",
-      "apiType": "rest",
-      "method": "get",
-      "url": "https://www.google.com/robots.txt"
     }
   ]
 }
