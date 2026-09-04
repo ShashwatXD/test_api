@@ -5,7 +5,7 @@
   "description": "",
   "httpRequestModel": {
     "method": "get",
-    "url": "https://www.google.com/robots.tx",
+    "url": "https://www.google.com/robots.txt",
     "headers": null,
     "params": null,
     "authModel": {
